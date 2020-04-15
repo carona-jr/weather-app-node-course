@@ -9,7 +9,7 @@ form.addEventListener('submit', (e) => {
     msgOne.textContent = msgTwo.textContent = ''
     load.setAttribute('src', '/img/2.gif')
     const location = search.value
-    fetch(`http://localhost:3000/weather?adress=${location}`).then((response) => {
+    fetch(`/weather?adress=${location}`).then((response) => {
         response.json().then((data) => {
             if (data.error) {
                 msgTwo.textContent = data.error
